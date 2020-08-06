@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'shop.apps.ShopConfig',
+    'cart.apps.CartConfig',
 ]
 
 MIDDLEWARE = [
@@ -120,3 +121,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
+
+CART_SESSION_ID = 'cart'
+# Это ключ, по которому мы будем хранить данные корзины в сессии. Так как сессии Django ассоциируются с конкретным
+# посетителем сайта, можно использовать один и тот же ключ для разных пользователей. Это не приведет к конфликту данных.
